@@ -67,7 +67,7 @@ db.movies.insertMany([
 //db.movies.find({writer: 'J .R .R. Tolkien'},{_id:0});
 
 //Get all documents where actors include "Brad Pitt"
-//db.movies.find({ 'Brad Pitt': { $in: 'actors' } }, { _id: 0 }); ++
+//db.movies.find({'actors': 'Brad Pitt'}, { _id: 0 });
 
 //Get all documents with franchise set to "The Lord of the Rings"
 //db.movies.find({'franchise' : 'The Lord of the Rings'},{_id:0});
@@ -76,4 +76,4 @@ db.movies.insertMany([
 //db.movies.find({'year': {$gte: 1990, $lt: 2000}},{_id:0});
 
 //Get all movies released before the year 2000 or after 2010
-//db.movies.find({&or:'year':{$lt: 2000, $gt: 2010}},{_id:0}); ++
+//db.movies.find({ $or: [{year:{$lt: 2000}}, {year:{$gt: 2010}}]},{_id:0});
