@@ -59,7 +59,7 @@ db.library.insertMany([
           ]);
 
 
-db.library.find({});
+//db.library.find({});
 
 //Search the titles of books whose author surname is 'Stevens'.
 //let stevens = {'author.surname': 'Stevens'};
@@ -73,6 +73,7 @@ db.library.find({});
 
 //Search the books whose title contains the word Web or the word TV.
 //db.library.find({$or: [{'title': /Web/}, {'title': /TV/}]});
+//db.library.find({$or: [{'title': {$regex: /web/i} }, {'title':{ $regex: /tv/i} }]});
 
 //Search the books whose title contains the word Web or the word TV (case insensitive)
 //db.library.find({$or: [{'title': /Web/i}, {'title': /TV/i}]});
